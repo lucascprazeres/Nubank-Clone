@@ -2,14 +2,14 @@
 
 ![](assets/Nubank_Logo.png)
 
-Uma reprodução React Native do App do Nubank!
+### Uma reprodução React Native do App do Nubank!
 
 ![](.github/nubank.gif)
 
-## Sobre
+## Sobre :wink:
 O app consiste um uma interface React Native que simula o app do Nubank (com animações!), mas, até o momento, sem funcionalidades extras.
 
-*Esse projeto foi originalmente desenvolvido por @diego3g, [nesse vídeo](https://www.youtube.com/watch?v=DDm0M_rZLJo&t=35s). Porém, ele sofreu algumas adaptações, como, por exemplo, o uso das ferramentas expo e typescript!*
+*Esse projeto foi originalmente desenvolvido por [Diego Fernandes](https://github.com/diego3g), [nesse vídeo](https://www.youtube.com/watch?v=DDm0M_rZLJo&t=35s). Porém, ele sofreu algumas adaptações, como, por exemplo, o uso das ferramentas expo e typescript!*
 
 ## Tecnologias utilizadas :mag:
 * React Native
