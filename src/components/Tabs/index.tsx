@@ -1,12 +1,24 @@
 import React from 'react';
 
+import {Animated} from 'react-native';
+
 import { MaterialIcons as Icon } from '@expo/vector-icons';
 
 import { Container, TabsContainer, TabItem, TabText } from './styles';
 
-export default function Main() {
+interface Props {
+  translateY: Animated.Value
+}
+
+const Main: React.FC<Props> = (props)  => {
   return (
-    <Container>
+    <Container style={{
+      opacity: props.translateY.interpolate({
+        inputRange: [0, 380],
+        outputRange: [1, 0.3]
+      })
+    }}
+    >
       <TabsContainer>
         <TabItem>
           <Icon name="person-add" size={24} color="#fff" />
@@ -31,3 +43,5 @@ export default function Main() {
     </Container>
   );
 }
+
+export default Main;

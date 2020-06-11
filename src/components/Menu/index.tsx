@@ -1,4 +1,5 @@
 import React from 'react';
+import { Animated } from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 
 import { MaterialIcons as Icon } from '@expo/vector-icons';
@@ -7,10 +8,20 @@ import { Container, Code, Nav, NavItem, NavText, SignOutButton, SignOutButtonTex
 
 const string = "https://github.com/lucascprazeres";
 
-const Menu = () => (
-  <Container>
+interface Props {
+  translateY: Animated.Value
+}
+
+const Menu: React.FC<Props> = (props) => (
+  <Container style={{
+    opacity: props.translateY.interpolate({
+      inputRange: [0, 150],
+      outputRange: [0, 1],
+    })
+  }}
+  >
     <Code>
-      <QRCode 
+      <QRCode
         value={string}
         size={80}
         backgroundColor="#FFF"
@@ -40,7 +51,7 @@ const Menu = () => (
       </NavItem>
     </Nav>
 
-    <SignOutButton onPress={() => {}}>
+    <SignOutButton onPress={() => { }}>
       <SignOutButtonText>SAIR DO APP</SignOutButtonText>
     </SignOutButton>
   </Container>
